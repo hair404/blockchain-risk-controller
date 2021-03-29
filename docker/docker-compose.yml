@@ -1,0 +1,13 @@
+version: '3'
+services:
+  degree_public_server_risk_controller:
+    image: "thttnt/degree-public-server-risk-controller"
+    command: ["java","-jar","/root/risk-controller/RiskController-1.0-SNAPSHOT.jar"]
+    environment: 
+      SMTP_SERVER: "smtp.126.com"
+      SMTP_PORT: 465
+      EMAIL_ACCOUNT: "hair404_degree@126.com"
+      EMAIL_PASSWORD: "JCBSMXKOPOZERUNJ"
+      NOTICE_EMAIL: "HaotianTu@126.com"
+      PUBLIC_SERVER: "http://degree.hair404.top:8050"
+      CHECK_INTERVAL: 1000
